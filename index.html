@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="mysite">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="big data, virtualization, machine learning">
+    <meta name="author" content="Shailesh Garg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <title>Shailesh</title>
+
+	<link href="css/default.css" rel="stylesheet" >
+	
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/blog.css" rel="stylesheet">
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+ 		 <a class="blog-navbar-brand">Shailesh Garg </a>      
+      <div class="container" ng-controller="MainCtrl">
+        <nav class="blog-nav" >
+			<a class="blog-nav-item" ng-repeat="item in menu" href="{{item.link}}" >{{item.title}}</a> 
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+       
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+		 
+		 <div ng-view></div>
+		 
+         
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+          <div class="sidebar-module-inset">
+            <h4>Tag Cloud</h4>
+            
+           <a href="#">hbase</a>
+              <a href="#">hive</a>
+              <a href="#">virtualbox</a>
+              <a href="#">vmware</a>
+              <a href="#">mysql</a>
+              <a href="#">angular</a>
+              <a href="#">d3js</a>
+              <a href="#">visualization</a>
+              <a href="#">machinelearning</a>
+              <a href="#">trading</a>
+              <a href="#">music</a>
+              <a href="#">arduino</a>
+          </div>
+          
+          <div class="sidebar-module">
+          </div>
+          
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/gargshail">GitHub</a></li>
+              <li><a href="https://twitter.com/shaileshgarg">Twitter</a></li>
+              <li><a href="http://www.linkedin.com/in/shaileshgarg/">LinkedIn</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+      <p><a href="">About Shailesh</a></p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+
+  </body>
+  	<script src="scripts/angular.js"></script>
+	<script src="scripts/angular-route.js"></script>
+	<script src="scripts/angular-sanitize.js"></script>
+	<script src="scripts/ui-bootstrap-tpls-0.10.0.js"></script>
+	<script src="scripts/marked.js"></script>
+	<script src="scripts/highlight.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers.js"></script>
+
+	<script>
+		hljs.initHighlightingOnLoad();
+		marked.setOptions({
+			highlight : function(code) {
+				return hljs.highlightAuto(code).value;
+			}
+		});
+	</script>
+</html>
