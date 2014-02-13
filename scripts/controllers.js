@@ -27,6 +27,11 @@ app.controller("MainCtrl", function($scope, $http) {
 	$http.get('json/global.json').success(function(data) {
 		$scope.global = data;
 	});
+	
+	$http.get('json/tagcloud.json').success(function(data) {
+		$scope.tagcloud = data;
+		console.log(data);
+	});
 });
 
 app.controller("FilterCtrl", function($scope) {

@@ -57,19 +57,9 @@
 
           <div class="sidebar-module-inset">
             <h4>Tag Cloud</h4>
-            
-           <a href="#">hbase</a>
-              <a href="#">hive</a>
-              <a href="#">virtualbox</a>
-              <a href="#">vmware</a>
-              <a href="#">mysql</a>
-              <a href="#">angular</a>
-              <a href="#">d3js</a>
-              <a href="#">visualization</a>
-              <a href="#">machinelearning</a>
-              <a href="#">trading</a>
-              <a href="#">music</a>
-              <a href="#">arduino</a>
+ 
+           <span ng-repeat="tag in tagcloud"><a href="#" >{{tag.name}}</a>&nbsp;</span>
+   
           </div>
           
           <div class="sidebar-module">
