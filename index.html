@@ -25,11 +25,11 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-controller="MainCtrl">
 
     <div class="blog-masthead">
- 		 <a class="blog-navbar-brand">Shailesh Garg </a>      
-      <div class="container" ng-controller="MainCtrl">
+ 		 <a class="blog-navbar-brand">{{global.blogname}} </a>      
+      <div class="container" >
         <nav class="blog-nav" >
 			<a class="blog-nav-item" ng-repeat="item in menu" href="{{item.link}}" >{{item.title}}</a> 
         </nav>
@@ -78,9 +78,9 @@
           <div class="sidebar-module">
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
-              <li><a href="https://github.com/gargshail">GitHub</a></li>
-              <li><a href="https://twitter.com/shaileshgarg">Twitter</a></li>
-              <li><a href="http://www.linkedin.com/in/shaileshgarg/">LinkedIn</a></li>
+              <li><a href="{{global.github}}">GitHub</a></li>
+              <li><a href="{{global.twitter}}">Twitter</a></li>
+              <li><a href="{{global.linkedin}}">LinkedIn</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
@@ -90,7 +90,7 @@
     </div><!-- /.container -->
 
     <div class="blog-footer">
-      <p><a href="">About Shailesh</a></p>
+      <p><a href="">About {{global.blogname}}</a></p>
       <p>
         <a href="#">Back to top</a>
       </p>
