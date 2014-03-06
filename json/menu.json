@@ -19,6 +19,11 @@
 	{
 		"title": "Menu5",
 		"link": "#/md/5"
+	},
+	{
+		"title": "Menu6",
+		"link": "#/md/test"
 	}
+	
 	
 ]

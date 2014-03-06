@@ -63,9 +63,11 @@
           </div>
           
           <div class="sidebar-module">
+          	 <h4>Recent Articles</h4>
+          	  <div ng-repeat="article in articles"><a href="#/md/{{article.md}}"  >{{article.title}}</a>&nbsp;</div>
           </div>
           
-          <div class="sidebar-module">
+          <div class="sidebar-module-inset">
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
               <li><a href="{{global.github}}">GitHub</a></li>

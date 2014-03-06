@@ -30,7 +30,10 @@ app.controller("MainCtrl", function($scope, $http) {
 	
 	$http.get('json/tagcloud.json').success(function(data) {
 		$scope.tagcloud = data;
-		console.log(data);
+	});
+	
+	$http.get('json/articles.json').success(function(data) {
+		$scope.articles = data;
 	});
 });
 
